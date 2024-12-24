@@ -1,0 +1,66 @@
+/* Estilo general para la página */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://i.pinimg.com/originals/0d/f1/ec/0df1ec8fac5c6a645548fef94c31262a.gif'); /* Cambia esta URL por la de tu imagen de Santa */
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Contenedor del padoru */
+.padoru-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    animation: zoomPulse 2s infinite; /* Animación de zoom */
+}
+
+/* Estilo del icono de Nezuko Padoru */
+#padoru {
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    transform: rotateY(45deg); /* Rotación 3D para darle un aspecto tridimensional */
+    transform-origin: center;
+    animation: rotate 5s infinite linear; /* Rotación continua */
+}
+
+/* Animación de zoom pulsante */
+@keyframes zoomPulse {
+    0%, 100% {
+        transform: scale(1); /* Tamaño normal */
+    }
+    50% {
+        transform: scale(1.1); /* Un poco más grande */
+    }
+}
+
+
+/* Estilo del mensaje de Feliz Navidad */
+#message {
+    display: none;
+    position: absolute;
+    top: 120%;
+    font-size: 50px;
+    color: gold;
+    animation: slide-up 2s ease-in-out;
+}
+
+/* Animación de aparición del mensaje */
+@keyframes slide-up {
+    0% { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
